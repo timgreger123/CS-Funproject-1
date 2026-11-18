@@ -5,3 +5,5 @@ print('hello world')
 import streamlit as st
 st.write('lets goooo')
 
+Streamlit run app.py
+
