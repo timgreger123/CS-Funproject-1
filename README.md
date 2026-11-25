@@ -10,3 +10,6 @@ Quick summary: Our Diesel Budget Planner helps trucking companies calculate thei
 
   `data/source_metadata.json` records the EU dataset's source, retrieval
   time, units, and conversion.
+
+  Link to the App :
+  https://cs-funproject-1-bzrxjumiagup3wdtvlg5ah.streamlit.app/
