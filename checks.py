@@ -1,3 +1,9 @@
+# BEGIN AI-GENERATED CODE [AI-03]
+# Source: OpenAI. (2026). ChatGPT [Large language model]. https://chatgpt.com/
+# Retained output: checks.py from the Diesel Budget Planner development chat.
+# Scope: The entire file, including the budget and VAT checks, SQLite
+# save/load checks, and weekly and Swiss monthly price-model checks.
+
 """Small checks you can read and run: python checks.py
 
 TemporaryDirectory creates an isolated database for these checks. It never
@@ -96,3 +102,5 @@ if __name__ == "__main__":
     check_model()
     check_swiss_prices()
     print("Budget, database and weekly and monthly model checks passed.")
+
+# END AI-GENERATED CODE [AI-03]
