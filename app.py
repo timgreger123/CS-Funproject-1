@@ -154,7 +154,7 @@ st.sidebar.caption("If excluding recoverable VAT, enter and check your own rate.
 
 price_options = ["Latest benchmark", "Enter my own price"]
 if forecast is not None and forecast["price"] > 0:
-    price_options.append("Simple ML estimate")
+    price_options.append("ML estimate")
 source_index = 1 if selected_plan != "New plan" and same_currency else 0
 price_source = st.sidebar.selectbox(
     "Planning price source", price_options, index=source_index,
@@ -170,7 +170,7 @@ if price_source == "Enter my own price":
                        "the app does not deduct VAT a second time.")
 else:
     pump_price = latest_pump_price
-    if price_source == "Simple ML estimate":
+    if price_source == "ML estimate":
         pump_price = forecast["price"]
     price = budget_price(pump_price, exclude_vat, vat_rate)
 st.sidebar.write(f"Planning price used: {currency} {price:.3f}/L")
@@ -190,7 +190,7 @@ else:
     c.metric("Operating margin", f"{result['margin']:.1f}%")
 
 budget_tab, history_tab, model_tab, saved_tab = st.tabs(
-    ["Budget & scenarios", "Price history", "Simple ML estimate", "Saved plans"]
+    ["Budget & scenarios", "Price history", "ML estimate", "Saved plans"]
 )
 
 with budget_tab:
@@ -243,7 +243,7 @@ with history_tab:
                        file_name=f"diesel_history_{country}.csv", mime="text/csv")
 
 with model_tab:
-    st.subheader(f"A simple one-{period} price estimate")
+    st.subheader(f"A one-{period} price estimate")
     if not enable_model:
         st.info("Enable the price-estimate learning extension in the sidebar to try it.")
     elif forecast is None:
