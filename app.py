@@ -117,14 +117,11 @@ if (date.today() - reference_end).days > max_age_days:
     st.warning("The latest benchmark may be out of date. The estimate starts from the observation shown above.")
 
 # 3. A small, separate learning extension using fit() and predict().
-enable_model = st.sidebar.checkbox("Enable price-estimate learning extension", value=False)
-forecast = None
-if enable_model:
-    try:
-        interval = MONTH if is_swiss else WEEK
-        forecast = estimate_next_price(history, interval, price_column)
-    except ValueError:
-        forecast = None
+try:
+    interval = MONTH if is_swiss else WEEK
+    forecast = estimate_next_price(history, interval, price_column)
+except ValueError:
+    forecast = None
 
 # 4. Get the company's monthly inputs (Lectures 2-4 and Streamlit).
 st.sidebar.header("Monthly business inputs")
@@ -244,9 +241,7 @@ with history_tab:
 
 with model_tab:
     st.subheader(f"A one-{period} price estimate")
-    if not enable_model:
-        st.info("Enable the price-estimate learning extension in the sidebar to try it.")
-    elif forecast is None:
+    if forecast is None:
         st.info(f"At least 30 consecutive-{period} price pairs are needed for this model.")
     else:
         st.write(f"Estimate for {forecast['date']:{date_format}}: {currency} {forecast['price']:.3f}/L")
