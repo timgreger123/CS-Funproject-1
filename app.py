@@ -55,6 +55,14 @@ for code, name in COUNTRIES.items():
     if name == country_name:
         country = code
 
+
+# BEGIN AI-GENERATED CODE [AI-04]
+# Source: OpenAI. (2026). ChatGPT [Large language model]. https://chatgpt.com/
+# Retained output: CS-Funproject-1/app.py in Diesel_Planner_HSG_Updated.zip,
+# delivered on 24 November 2026.
+# Scope: Select CHF or EUR and the corresponding price and date settings.
+# Keep saved budget amounts and input widgets separate by currency.
+
 is_swiss = country == "CH"
 currency = country_currency(country)
 price_column = f"price_{currency.lower()}_per_litre"
@@ -66,6 +74,9 @@ publisher = "Swiss Federal Statistical Office" if is_swiss else "European Commis
 budget_key = f"{key}_{currency}"
 same_currency = currency == country_currency(defaults["country"])
 budget_defaults = defaults if same_currency else new_plan
+
+# END AI-GENERATED CODE [AI-04]
+
 
 if st.sidebar.button("Refresh official history"):
     try:
