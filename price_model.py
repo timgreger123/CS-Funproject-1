@@ -1,3 +1,14 @@
+# BEGIN AI-GENERATED CODE [AI-02]
+# Source: OpenAI. (2026). ChatGPT [Large language model]. https://chatgpt.com/
+# Initial version delivered on 20 November 2026.
+# Swiss monthly estimates added on 24 November 2026.
+# Retained output: CS-Funproject-1/price_model.py in
+# Diesel_Planner_HSG_Updated.zip.
+# Scope: The entire module, including pairing consecutive prices, training
+# and testing the linear regression in date order, comparing it with the
+# unchanged-price baseline, and estimating the next week's or month's price.
+
+
 """Small learning extension: numeric regression instead of classification.
 
 Assignments 10/11 teach features, targets, fit(), predict() and held-out data.
@@ -87,3 +98,6 @@ def estimate_next_price(history, interval=WEEK, price_column="price_eur_per_litr
 def estimate_next_week(history):
     """Estimate the next weekly EUR price for existing callers."""
     return estimate_next_price(history)
+
+
+# END AI-GENERATED CODE [AI-02]
