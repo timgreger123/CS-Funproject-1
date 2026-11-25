@@ -19,7 +19,7 @@ CHART_SIZE = (7, 2.7)
 CHART_WIDTH = 680
 
 
-st.set_page_config(page_title="Diesel Budget Planner", page_icon="⛽", layout="wide")
+st.set_page_config(page_title="Diesel Budget Planner", layout="wide")
 st.title("Diesel Budget Planner")
 st.write("Plan a monthly fuel budget and see how a diesel-price change affects profit.")
 
