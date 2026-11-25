@@ -1,3 +1,12 @@
+# BEGIN AI-GENERATED CODE [AI-01]
+# Source: OpenAI. (2026). ChatGPT [Large language model]. https://chatgpt.com/
+# Initial version delivered on 20 November 2026.
+# Swiss data support added on 24 November 2026.
+# Retained output: CS-Funproject-1/refresh_data.py in
+# Diesel_Planner_HSG_Updated.zip.
+# Scope: The entire module, including the EU and Swiss data downloads,
+# Excel parsing, validation, and writing the CSV files and metadata.
+
 """Optional HTTP download, using the requests pattern from Assignment 6.
 
 Also uses pandas.read_excel, a small extension to the course's read_csv.
@@ -126,3 +135,5 @@ def refresh_history(country="DE"):
 if __name__ == "__main__":
     result = refresh_history()
     print("Latest reporting date:", result["last_observation"])
+
+# END AI-GENERATED CODE [AI-01]
