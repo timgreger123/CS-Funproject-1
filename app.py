@@ -1,6 +1,5 @@
-from datetime import date
+from datetime import date       #we need it to work out today's date and the age of the price data
 import json
-
 import matplotlib.pyplot as plt
 from requests import RequestException
 import streamlit as st
