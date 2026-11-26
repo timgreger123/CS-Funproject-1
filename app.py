@@ -1,5 +1,3 @@
-"""Start from Terminal with: python -m streamlit run app.py"""
-
 from datetime import date
 import json
 
