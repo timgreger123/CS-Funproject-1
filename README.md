@@ -13,3 +13,6 @@ Quick summary: Our Diesel Budget Planner helps trucking companies calculate thei
 
   Link to the App :
   https://cs-funproject-1-bzrxjumiagup3wdtvlg5ah.streamlit.app/
+
+ChatGPT haben wir für das Brainstorming und die Weiterentwicklung unserer Projektidee genutzt. 
+Ausserdem hat uns ChatGPT geholfen, die Projektstruktur zu verstehen und nachzuvollziehen, welche Aufgaben und Codebestandteile in welche Dateien gehören.

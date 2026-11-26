@@ -1,7 +1,7 @@
-from datetime import date       #we need it to work out today's date and the age of the price data
-import json
-import matplotlib.pyplot as plt
-from requests import RequestException
+from datetime import date                #we need it to work out today's date and the age of the price data
+import json                              #JSON is a text format for storing named values
+import matplotlib.pyplot as plt          #to create charts
+from requests import RequestException    #for errors when downloading the diesel price history
 import streamlit as st
 
 from diesel_engine import (
